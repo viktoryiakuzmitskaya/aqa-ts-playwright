@@ -16,7 +16,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('[UI] [Heroku] Dynamic Controls', () => {
-    test('', async ({ page }) => {
+    test('Checkbox add/remove', async ({ page }) => {
         await page.goto('https://the-internet.herokuapp.com/');
         await page.getByRole('link', { name: 'Dynamic Controls' }).click();
         await page.getByRole('button', { name: 'Remove' }).waitFor({ state: 'visible' });

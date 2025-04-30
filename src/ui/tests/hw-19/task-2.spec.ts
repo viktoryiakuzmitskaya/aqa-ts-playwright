@@ -4,3 +4,17 @@
 //  - дождаться исчезновения спиннеров
 //  - проверить действительно ли пользователь с логином Anatoly вошел в систему
 //  - Проверить скриншотом боковое навигационное меню с выбранной страницей Home
+
+import { test, expect } from '@playwright/test';
+
+test.describe('[UI] [Sales Portal] Login', () => {
+    test('User can login with valid credentials', async ({ page }) => {
+        await page.goto('https://anatoly-karpovich.github.io/aqa-course-project/#');        
+        await page.locator('#emailinput').fill('test@gmail.com');
+        await page.locator('#passwordinput').fill('12345678');
+        await page.getByRole('button', { name: 'Login' }).click();
+        await expect(page.locator('.spinner-border')).toHaveCount(0);
+        await expect(page.getByRole('link', { name: 'Anatoly' })).toBeVisible();
+        await expect(page.locator('#sidebar')).toHaveScreenshot('sidebar.png');
+    });
+});
