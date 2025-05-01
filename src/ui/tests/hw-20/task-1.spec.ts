@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { negativeTestCases } from './task-1-test-data.js';
+import { negativeTestCases } from './task-1-test-data';
 
 test.describe('[UI] [Registration] Negative Test Cases', () => {
     test.beforeEach(async ({ page }) => {
