@@ -12,7 +12,10 @@
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.3"
   },
-  "scripts": {},
+  "scripts": {
+    "test:ui": "npx playwright test",
+    "ui-mode": "npx playwright test --ui"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
