@@ -8,7 +8,7 @@ import { CustomersPage } from "ui/pages/customers/customers.page";
 import { HomePage } from "ui/pages/home.page";
 
 test.describe("[UI] [Sales Portal] [Customers]", async () => {
-   test.only("Should create customer and verify notification and upper table row", async ({ page }) => {
+   test("Should create customer and verify notification and upper table row", async ({ page }) => {
     const signInPage = new SignInPage(page);
     const homePage = new HomePage(page);
     const customersPage = new CustomersPage(page);
