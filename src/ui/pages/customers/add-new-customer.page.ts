@@ -1,6 +1,5 @@
 import { ICustomer } from "types/customer.types";
 import { SalesPortalPage } from "../salesPortal.page";
-import { Locator } from "@playwright/test";
 
 export class AddNewCustomerPage extends SalesPortalPage {
   emailInput = this.page.locator("#inputEmail");
