@@ -3,7 +3,7 @@ import { SalesPortalPage } from "../salesPortal.page";
 
 export class CustomersPage extends SalesPortalPage {
   addNewCustomerButton = this.page.getByRole("button", { name: "Add Customer" });
-  customersTable = this.page.locator("#table-customers");
+  private readonly customersTable = this.page.locator("#table-customers");
   tableRow = this.customersTable.locator('tr');
 
   uniqueElement = this.addNewCustomerButton;
