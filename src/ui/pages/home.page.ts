@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test";
+import { Locator } from "@playwright/test";
 import { ModuleName } from "types/home.types";
 import { SalesPortalPage } from "./salesPortal.page";
 
