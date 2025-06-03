@@ -5,11 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "@faker-js/faker": "^9.8.0",
+    "ajv": "^8.17.1",
     "dotenv": "^16.5.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0",
+    "@types/ajv": "^1.0.4",
     "@types/dotenv": "^8.2.3",
     "@types/lodash": "^4.17.17",
     "@types/node": "^22.15.3"
