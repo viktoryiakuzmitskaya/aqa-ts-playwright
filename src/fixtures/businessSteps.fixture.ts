@@ -21,6 +21,8 @@ export const test = base.extend<IBusinessSteps>({
         });
     },
 
+    //TODO: this shoul be changed, expect to be in the test, not in the fixture
+    // but for hw-22, it was easier to use it like this
     createCustomer: async ({ homePage, addNewCustomerPage, customersPage }, use) => {
         await use(async (params?: Partial<ICustomer>) => {
             await homePage.clickModuleButton('Customers');
