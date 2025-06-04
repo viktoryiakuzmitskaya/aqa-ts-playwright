@@ -2,9 +2,11 @@ import { ICustomer, ICustomerInTable } from "types/customer.types";
 import { SalesPortalPage } from "../salesPortal.page";
 import { COUNTRIES } from "data/customers/countries.data";
 import { FilterModal } from "../customers/filter.modal";
+import { DeleteModal } from "../customers/delete.modal";
 
 export class CustomersPage extends SalesPortalPage {
   readonly filterModal = new FilterModal(this.page);
+  readonly deleteModal = new DeleteModal(this.page);
 
   readonly addNewCustomerButton = this.page.getByRole("button", { name: "Add Customer" });
 
@@ -75,11 +77,10 @@ export class CustomersPage extends SalesPortalPage {
       email,
       name,
       country: country as COUNTRIES,
-      //createdOn
     };
   }
 
-  async getTabeData() {
+  async getTableData() {
     const tableData: Array<ICustomerInTable> = [];
 
     const rows = await this.tableRow.all();
@@ -89,7 +90,6 @@ export class CustomersPage extends SalesPortalPage {
         email,
         name,
         country: country as COUNTRIES,
-        //createdOn
       });
     }
     return tableData;
