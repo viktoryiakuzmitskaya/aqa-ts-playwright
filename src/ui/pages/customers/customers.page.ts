@@ -3,6 +3,7 @@ import { SalesPortalPage } from "../salesPortal.page";
 import { COUNTRIES } from "data/customers/countries.data";
 import { FilterModal } from "../customers/filter.modal";
 import { DeleteModal } from "../customers/delete.modal";
+import { customersSortField } from "types/api.types";
 
 export class CustomersPage extends SalesPortalPage {
   readonly filterModal = new FilterModal(this.page);
